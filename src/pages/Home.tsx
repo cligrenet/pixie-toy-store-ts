@@ -5,7 +5,7 @@ export const Home = () => {
 				className="text-center p-5 front text-black text-bg-light opacity-75 rounded-3"
 				style={{ position: 'absolute', zIndex: '100' }}
 			>
-				<h1 className="pt-3">Pixie's Toy Shop</h1>
+				<h1 className="pt-3">Pixie Toy</h1>
 			</div>
 
 			<div
