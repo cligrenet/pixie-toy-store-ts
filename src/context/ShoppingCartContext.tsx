@@ -2,6 +2,7 @@ import { createContext, ReactNode, useContext, useState } from 'react';
 import { ShoppingCart } from '../components/ShoppingCart';
 import { useLocalStorage } from '../hooks/useLocalStorage';
 
+// Types
 type ShoppingCartProviderProps = {
 	children: ReactNode;
 };
@@ -22,12 +23,14 @@ type ShoppingCartContext = {
 	cartItems: CartItem[];
 };
 
+// Context
 const ShoppingCartContext = createContext({} as ShoppingCartContext);
 
 export const useShoppingCart = () => {
 	return useContext(ShoppingCartContext);
 };
 
+// Context Provider
 export const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const [cartItems, setCartItems] = useLocalStorage<CartItem[]>('shopping-cart', []);

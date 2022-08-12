@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+// NOTE Custom hook to persist data using localStorage, tricky part
 export const useLocalStorage = <T>(key: string, initialValue: T | (() => T)) => {
 	const [value, setValue] = useState<T>(() => {
 		const jsonValue = localStorage.getItem(key);
